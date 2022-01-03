@@ -1,0 +1,61 @@
+/*                                                                            Reset
+====================================================================================*/
+
+body,
+header,
+main,
+aside,
+section,
+footer,
+cite,
+input,
+button,
+form,
+output,
+textarea,
+label,
+div,
+span,
+img,
+svg,
+nav,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    color: transparent;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+}

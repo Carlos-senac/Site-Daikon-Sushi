@@ -1,0 +1,18 @@
+/* fonts */
+
+
+/* font-family: 'Roboto', sans-serif; -- 400 / 500 / 700 --> */
+
+
+/*                                                                      variables
+====================================================================================*/
+
+:root {
+    --colorBlue: #21243d;
+    --colorWhite: #eeeeee;
+    --colorYellow: #ffd17e;
+    --colorBlack: #111111;
+    --colorText: #121212;
+    --colorTextWhite: #fff;
+    --family: 'Roboto', sans-serif;
+}

@@ -1,0 +1,535 @@
+@import "./reset.css";
+@import "./variables.css";
+@import "./media.css";
+
+/* @import "./media.css"; */
+
+
+/*                                                                             BASE
+====================================================================================*/
+
+body {
+    font-family: var(--family);
+    color: var(--colorText);
+    position: relative;
+}
+
+svg {
+    width: 1.5em;
+    height: auto;
+}
+
+.container {
+    margin: 0 3.892215568862275%;
+}
+
+.flex-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/*                                                                             Header
+====================================================================================*/
+
+header {
+    width: 100%;
+    background-color: var(--colorBlue);
+    color: var(--colorWhite);
+    position: fixed;
+    top: 0;
+    left: 0;
+    box-shadow: 0 0.25em 0.625em rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+header svg path {
+    fill: var(--colorYellow);
+}
+
+header .container {
+    padding: 0.75em 0;
+}
+
+header .container .logo {
+    order: 1;
+}
+
+header .container .logo a img {
+    display: none;
+}
+
+header .container .logo img {
+    width: 2em;
+    margin-right: 0.5em;
+}
+
+header .container .logo h1 {
+    font-size: 1.5em;
+}
+
+header .container .logo h1 span {
+    color: var(--colorYellow);
+}
+
+header nav {
+    order: 0;
+}
+
+header nav .menu {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--colorBlue);
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    opacity: 0;
+    transition: top .7s ease, opacity .7s ease;
+    z-index: 0;
+    font-size: 1.5em;
+}
+
+header nav .menu ul {
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+header nav .menu ul a {
+    display: inline-block;
+    position: relative;
+}
+
+header nav .menu ul a::after {
+    content: '';
+    width: 0;
+    height: 0.125em;
+    position: absolute;
+    left: 0;
+    bottom: -0.25em;
+    background-color: var(--colorYellow);
+    transition: width .3s ease;
+}
+
+header nav button.toggle-menu {
+    position: relative;
+    z-index: 3;
+}
+
+header nav button.toggle-menu svg {
+    width: 2em;
+    height: auto;
+}
+
+header .container>div:last-child {
+    gap: 0.3125em;
+    order: 2;
+}
+
+header .container>div:last-child .search svg {
+    width: 1.8em;
+    height: auto;
+}
+
+header .container .search {}
+
+header .container .search>div {
+    width: 100%;
+    padding: 0.75em 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header .container .search input {
+    display: none;
+}
+
+
+/* Header Interactions/Effects -->
+*/
+
+header nav .menu.open {
+    top: 0;
+    opacity: 1;
+}
+
+header nav .menu ul a:hover::after {
+    width: 100%;
+}
+
+
+/*                                                                             Main
+====================================================================================*/
+
+main {
+    padding-top: 3.5em;
+}
+
+main section {
+    padding: 3.25em 0;
+}
+
+section .text {
+    max-width: 31.25em;
+}
+
+section .text h2 {
+    font-size: 2.25em;
+    margin-bottom: 0.8888888888888889em;
+}
+
+section .text p {
+    font-weight: 400;
+    margin-bottom: 1.5em;
+}
+
+section .text a {
+    display: inline-block;
+    padding: 0.5em 2em;
+    border-radius: 1.25em;
+    background-color: var(--colorBlue);
+    color: var(--colorWhite);
+}
+
+.start,
+.popular,
+.statistics,
+.ceo,
+footer {
+    color: var(--colorWhite);
+}
+
+.about-sushi-1,
+.about-sushi-2,
+.email {
+    color: var(--colorBlue);
+}
+
+.start,
+.popular,
+.statistics,
+.about-sushi-1,
+.about-sushi-2,
+.ceo,
+.email {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+/*                                                                   Section - Start
+====================================================================================*/
+
+section.start {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background-image: url("../img/background-start.png");
+    background-position: 50% 0;
+}
+
+
+/*                                                                   Section - popular
+====================================================================================*/
+
+section.popular {
+    background-color: var(--colorBlue);
+}
+
+.popular .text,
+.statistics .text {
+    text-align: center;
+}
+
+.popular .container>div:last-child,
+.statistics .container>div:last-child {
+    gap: 2em;
+    flex-direction: column;
+}
+
+.popular .container>div:last-child .card,
+.statistics .container>div:last-child .card {
+    max-width: 12.5em;
+    padding: 0.75em;
+    text-align: center;
+}
+
+.popular .container>div:last-child .card img {
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.popular .container>div:last-child .card h3 {
+    margin-top: 0.75em;
+    margin-bottom: 0.5em;
+    color: var(--colorYellow);
+}
+
+
+/*                                                             Section - about sushi
+====================================================================================*/
+
+.about-sushi-1,
+.about-sushi-2 {
+    background-color: var(--colorYellow);
+}
+
+.about-sushi-1 .container,
+.about-sushi-2 .container {
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.about-sushi-1 .container>div:first-child img,
+.about-sushi-2 .container>div:last-child img {
+    width: 100%;
+    height: auto;
+    /* border-radius: 100%; */
+    max-width: 31.25em;
+    clip-path: circle();
+}
+
+
+/*                                                             Section - statistics
+====================================================================================*/
+
+.statistics {
+    background-color: var(--colorBlue);
+}
+
+.statistics .container>div:last-child .card {
+    width: 12.5em;
+    height: 12.5em;
+    border: 0.25em solid var(--colorWhite);
+    border-radius: 100%;
+}
+
+.statistics .container>div:last-child .card p {
+    font-size: 2em;
+}
+
+
+/*                                                             Section - about sushi
+====================================================================================*/
+
+.ceo {
+    background-image: url("../img/background-ceo.png");
+    text-align: center;
+}
+
+.ceo .container img {
+    width: 15.625em;
+    height: 15.625em;
+    border-radius: 100%;
+}
+
+.ceo .container>div:last-child p {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.ceo .container>div:last-child h2 {
+    font-size: 2.25em;
+}
+
+
+/*                                                             Section - email
+====================================================================================*/
+
+.email {
+    background-color: var(--colorYellow);
+    text-align: center;
+}
+
+.email .container>div:last-child div {
+    width: 100%;
+    max-width: 43.75em;
+    position: relative;
+}
+
+.email .container>div:last-child div input {
+    width: 100%;
+    font-size: 1em;
+    padding: 0.75em 43.35260115606936% 0.75em 1.25em;
+    border-radius: 1.25em;
+}
+
+.email .container>div:last-child div button {
+    padding: 0 7.5%;
+    height: 100%;
+    background-color: var(--colorBlue);
+    border-radius: 1.25em;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--colorWhite);
+    font-weight: 700;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+
+/*                                                                          Footer
+====================================================================================*/
+
+footer {
+    padding: 3.25em 0;
+    background-color: var(--colorBlack);
+    color: var(--colorWhite);
+}
+
+.footer-part-1 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+.footer-part-1 h2 {
+    font-size: 1.5em;
+    margin-bottom: 0.75em;
+}
+
+.footer-part-1 p {
+    margin-bottom: 1em;
+}
+
+.footer-part-1 .social ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75em;
+}
+
+.footer-part-1 .social ul a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5em;
+    height: 2.5em;
+    background-color: var(--colorWhite);
+    border-radius: 100%;
+}
+
+.footer-part-1 .social ul a svg path {
+    fill: var(--colorBlack);
+}
+
+.footer-part-1>div:last-child {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5em;
+}
+
+.footer-part-1>div:last-child h2 {
+    color: var(--colorYellow);
+}
+
+.footer-part-1 ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.footer-part-2 {
+    margin-top: 2em;
+    text-align: center;
+}
+
+.footer-part-2 a {
+    font-weight: 700;
+    color: var(--colorYellow);
+}
+
+
+/* Media Query */
+
+@media screen and (min-width: 340px) {
+    header .container .logo a img {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 740px) {
+    /*                                                                             Header
+====================================================================================*/
+    header .container .logo {
+        order: 0;
+    }
+    header nav {
+        order: 1;
+    }
+    header nav .menu {
+        height: auto;
+        background-color: transparent;
+        position: static;
+        opacity: 1;
+        font-size: 1em;
+    }
+    header nav .menu ul {
+        flex-direction: row;
+    }
+    header .container>div:last-child {
+        gap: 0.3125em;
+        order: 2;
+    }
+    header nav button.toggle-menu {
+        display: none;
+    }
+    /*                                                                   Section - Start
+====================================================================================*/
+    .popular {
+        background-image: url("../img/background-design-1.png");
+    }
+    .statistics {
+        background-image: url("../img/background-design-3.png");
+    }
+    .about-sushi-1 {
+        background-image: url("../img/background-design-2.png");
+    }
+    .about-sushi-2 {
+        background-image: url("../img/background-design-4.png");
+    }
+    .email {
+        background-image: url("../img/background-design-5.png");
+    }
+    /*                                                                   Section - popular
+====================================================================================*/
+    .popular .container>div:last-child,
+    .statistics .container>div:last-child {
+        flex-direction: row;
+        justify-content: center;
+    }
+    /*                                                             Section - about sushi 1 & 2
+====================================================================================*/
+    .about-sushi-1 .container,
+    .about-sushi-2 .container {
+        flex-direction: row;
+        justify-content: center;
+        gap: 2em;
+    }
+    /*                                                                          Footer
+====================================================================================*/
+    .footer-part-1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .footer-part-1>div:last-child {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5em;
+    }
+    .footer-part-1>div:first-child {
+        max-width: 25em;
+    }
+}
